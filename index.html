@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MLR Building Materials | We Don't Deliver Bricks. We Bring the Factory.</title>
+  <meta name="description"
+    content="On-demand, on-site concrete brick manufacturing tailored to your project's schedule and scale across South India.">
+
+  <!-- Typography: Barlow Semi Condensed (Primary) & Barlow (Secondary & Nav) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=2026_v30">
+  <link rel="icon" type="image/svg+xml" href="MLR Logo.svg">
+</head>
+
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#home" class="skip-link">Skip to main content</a>
+
+  <!-- =========================================================================
+       0. FLOATING PILL NAVBAR
+       ========================================================================= -->
+  <header class="navbar-wrapper" id="navbar">
+    <script>
+      (function () {
+        try {
+          var hash = window.location.hash;
+          var hasScrolledHash = hash && hash !== '#home' && hash !== '';
+          if (hasScrolledHash || window.scrollY > 60 || window.pageYOffset > 60) {
+            document.getElementById('navbar').classList.add('is-scrolled');
+          }
+        } catch (e) { }
+      })();
+    </script>
+    <div class="navbar-pill">
+      <a href="#home" class="navbar-brand" aria-label="MLR Building Materials Home">
+        <img src="MLR Logo.svg" alt="MLR Infra Logo" class="navbar-logo-img">
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="navbar-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#products" class="nav-link">Products</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#estimator" class="nav-link">Estimator</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Center Section Indicator (Shown in Collapsed Pill on Scroll) -->
+      <div class="nav-center-indicator" id="navCenterIndicator" aria-label="Current Section">
+        <div class="nav-indicator-roller" id="navIndicatorRoller">
+          <span class="nav-indicator-text current" id="navIndicatorText">Home</span>
+        </div>
+        <script>
+          (function () {
+            try {
+              var hash = window.location.hash;
+              var isHome = !hash || hash === '#home';
+              if (isHome) {
+                sessionStorage.setItem('mlr_nav_scrolled', '0');
+                sessionStorage.setItem('mlr_nav_section_label', 'Home');
+                sessionStorage.setItem('mlr_nav_section_idx', '0');
+              }
+              var lbl = isHome ? 'Home' : sessionStorage.getItem('mlr_nav_section_label');
+              var txt = document.getElementById('navIndicatorText');
+              if (lbl && txt) {
+                txt.textContent = lbl;
+              }
+            } catch (e) { }
+          })();
+        </script>
+      </div>
+
+      <!-- Nav CTA & Mobile Hamburger -->
+      <div class="navbar-actions">
+        <a href="#contact" class="btn-quote" id="navGetQuoteBtn">
+          <span>Get Quote</span>
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+        <button type="button" class="hamburger-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu"
+          aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+      <div class="mobile-drawer-body" data-lenis-prevent>
+        <div class="drawer-header">
+          <img src="MLR Logo.svg" alt="MLR Building Materials" class="drawer-logo">
+          <button type="button" class="drawer-close" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="drawer-nav-list">
+          <li><a href="#home" class="drawer-nav-link">Home</a></li>
+          <li><a href="#about" class="drawer-nav-link">About</a></li>
+          <li><a href="#products" class="drawer-nav-link">Products</a></li>
+          <li><a href="#projects" class="drawer-nav-link">Projects</a></li>
+          <li><a href="#estimator" class="drawer-nav-link">Estimator</a></li>
+          <li><a href="#contact" class="drawer-nav-link">Contact</a></li>
+        </ul>
+        <div class="drawer-footer">
+          <a href="#contact" class="btn-quote btn-full" id="mobileDrawerQuoteBtn">
+            <span>Get Quote</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- =========================================================================
+         1. HERO SECTION (Figma Frame 0: hero)
+         ========================================================================= -->
+    <section class="hero-section" id="home">
+      <div class="container">
+
+        <div class="hero-layout-grid">
+
+          <!-- Left Column (Blue Card + 3 Stats) -->
+          <div class="hero-left-col">
+
+            <!-- Royal Blue Card -->
+            <div class="hero-royal-card">
+              <h1 class="hero-headline">
+                We Don't Deliver<br>
+                <span class="lime-text">Bricks.</span><br>
+                We Bring the<br>
+                <span class="lime-text">Factory.</span>
+              </h1>
+              <p class="hero-subtext">
+                CC bricks, precast fencing, and paver cast where you're building, not trucked in and hoped for. Proven
+                across Telangana, Andhra Pradesh, Tamil Nadu, Maharashtra, and Karnataka.
+              </p>
+            </div>
+
+            <!-- Unified Stats Card directly under the main card -->
+            <div class="hero-stats-unified">
+              <div class="hero-stat-item">
+                <div class="stat-big-num">5</div>
+                <div class="stat-sub-label">Years Into the<br>Market</div>
+              </div>
+              <div class="hero-stat-divider"></div>
+              <div class="hero-stat-item">
+                <div class="stat-big-num">23</div>
+                <div class="stat-sub-label">Districts Served All<br>India</div>
+              </div>
+              <div class="hero-stat-divider"></div>
+              <div class="hero-stat-item">
+                <div class="stat-big-num">30+</div>
+                <div class="stat-sub-label">Projects<br>Completed</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column (Crane Construction Image Card) -->
+          <div class="hero-right-col">
+            <div class="hero-image-card">
+              <img src="assets/hero-construction-exact.png" alt="On-Site Manufacturing High-Rise Construction"
+                class="hero-crane-img">
+
+              <!-- 10+ Ongoing Badge -->
+              <div class="hero-floating-badge">
+                <span class="badge-accent-num">10+</span>
+                <span class="badge-desc-text">Ongoing &amp; Upcoming Projects</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         2. ABOUT US SECTION
+         ========================================================================= -->
+    <section class="about-section" id="about">
+      <div class="container">
+
+        <div class="about-card-container">
+
+          <!-- Header -->
+          <div class="about-header-block">
+            <div class="about-label">About Us</div>
+            <h2 class="about-main-heading">
+              <span class="heading-line-blue">Most brick suppliers make you wait for a truck.</span>
+              <span class="heading-line-lime">We skip the truck.</span>
+            </h2>
+            <p class="about-lead-text">
+              For large orders, we move our machinery to your site and cast the bricks or fencing panels right there -
+              no
+              bulk transport, no bottlenecks, no guessing when the load arrives.
+            </p>
+          </div>
+
+          <!-- Featured Architectural Concrete Bricks Showcase Image -->
+          <div class="about-hero-image-wrap">
+            <img src="assets/about-concrete-bricks.jpg"
+              alt="Stacked architectural raw concrete bricks and masonry blocks" class="about-hero-image"
+              loading="lazy">
+          </div>
+
+          <!-- Vision Card -->
+          <div class="about-vision-card">
+            <h3 class="about-vision-title">Vision</h3>
+            <p class="about-vision-text">
+              CC bricks, precast fencing, and paver blocks are what we build today. What we're building toward is
+              bigger:
+              <strong>a full range of materials, made the same way - on-site, on your terms.</strong>
+            </p>
+            <p class="about-vision-text">
+              Since 2021, we've delivered <strong>30+ projects</strong> - from <strong>factory quarters to hospitals to
+                apartment complexes</strong> - with 10+ more ongoing and upcoming. <strong>Amaraja</strong> has already
+              put that to the test. So can you, anywhere in India.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. WHAT WE MANUFACTURE (Figma Frame 2: Products)
+         ========================================================================= -->
+    <section class="products-section" id="products">
+      <div class="container">
+
+        <!-- Header -->
+        <div class="section-center-header">
+          <span class="section-label-blue">Products</span>
+          <h2 class="section-title">What We Manufacture</h2>
+          <p class="section-subtitle">
+            Casting equipment calibrated to your structural drawings. Baseline capacity of <strong>3,000–4,000
+              bricks/day</strong> scaling higher once mobilized to site.
+          </p>
+
+          <!-- Segmented Pill Toggle -->
+          <div class="products-toggle-wrapper">
+            <div class="products-pill-toggle">
+              <button type="button" class="tab-pill active" id="tabBricks">CC Bricks</button>
+              <button type="button" class="tab-pill" id="tabFencing">Precast Fencing</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2-Column Products Layout -->
+        <div class="products-showcase-grid">
+
+          <!-- Left Column (Texture Image + Standard Sizes Dark Overlay) -->
+          <div class="product-left-showcase">
+            <div class="product-img-wrapper">
+              <img src="assets/solid-cc-bricks.jpg" alt="Solid CC Bricks" class="product-concrete-texture"
+                id="productShowcaseImg" loading="eager">
+            </div>
+
+            <!-- Standard Sizes Dark Card at bottom -->
+            <div class="standard-sizes-card">
+              <h4 class="sizes-title" id="productSizesTitle">Standard Sizes</h4>
+              <p class="sizes-subtitle" id="productSizesSubtitle">Moulds Ready, Available Right Now</p>
+
+              <div class="sizes-pills-2x2" id="productSizesGrid">
+                <button type="button" class="size-pill-btn active" data-size="300x200x200">300×200×200mm</button>
+                <button type="button" class="size-pill-btn" data-size="300x200x150">300×200×150mm</button>
+                <button type="button" class="size-pill-btn" data-size="300x200x100">300×200×100mm</button>
+                <button type="button" class="size-pill-btn" data-size="290x225x140">290×225×140mm</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column (2x2 Grid of Product Cards) -->
+          <div class="products-2x2-grid" id="productsGrid">
+
+            <!-- Card 1: Solid CC Bricks (Solid Royal Blue) -->
+            <div class="prod-item-card solid-blue-card active" data-index="0">
+              <h3 class="prod-name">Solid CC<br>Bricks</h3>
+              <p class="prod-desc">
+                Dense, high-strength bricks for the load it needs to carry - load-bearing walls, foundations, and
+                structures that can't afford to flex.
+              </p>
+            </div>
+
+            <!-- Card 2: Fly Ash CC Bricks (Light Blue Tint) -->
+            <div class="prod-item-card light-blue-card" data-index="1">
+              <h3 class="prod-name">Fly Ash CC<br>Bricks</h3>
+              <p class="prod-desc">
+                The sustainable choice, without sacrificing strength. Made with fly ash, keeping kilns and clay pits
+                out, so you build greener without compromising performance.
+              </p>
+            </div>
+
+            <!-- Card 3: Interlocking CC Bricks (Light Blue Tint) -->
+            <div class="prod-item-card light-blue-card" data-index="2">
+              <h3 class="prod-name">Interlocking<br>CC Bricks</h3>
+              <p class="prod-desc">
+                No mortar, no wasted days. The blocks lock into each other on-site, cutting both labour time and
+                material cost versus a conventional mortared wall
+              </p>
+            </div>
+
+            <!-- Card 4: Paver CC Blocks (Light Blue Tint) -->
+            <div class="prod-item-card light-blue-card" data-index="3">
+              <h3 class="prod-name">Paver CC<br>Blocks</h3>
+              <p class="prod-desc">
+                For driveways, walkways, and outdoor flooring that needs to take traffic. Built to handle vehicle load
+                and foot traffic without cracking or shifting over time.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Customization Strip Below Grid -->
+        <div class="custom-specs-strip">
+          <p class="custom-intro-text">
+            Every size above is available as standard. Need something non-standard for your specific architectural or
+            structural requirements?
+          </p>
+          <h3 class="custom-headline">
+            <span class="blue-spec-link">Custom dimensions,</span> built to your exact specification.
+          </h3>
+          <div class="custom-cta-wrap">
+            <a href="#estimator" class="btn-royal-pill">Request a Custom Size</a>
+          </div>
+        </div>
+
+        <!-- Site Services (Beyond Materials) Lime Card -->
+        <div class="lime-services-card">
+
+          <div class="services-header-row">
+            <div class="services-title-col">
+              <span class="services-tag-kicker">Site Services</span>
+              <h3 class="services-bold-title">Beyond Materials</h3>
+            </div>
+            <a href="#contact" class="dark-pill-contact-btn">
+              <span>Contact</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- 3 Columns with Vertical Dividers (Matches Figma exactly) -->
+          <div class="services-3cols-row">
+
+            <div class="service-col-item">
+              <span class="service-pill-badge">Centering</span>
+              <p class="service-col-desc">
+                formwork/shuttering support for casting slabs, beams &amp; columns on-site, held in place until the
+                concrete cures &amp; can carry its own load
+              </p>
+            </div>
+
+            <div class="service-col-divider" aria-hidden="true"></div>
+
+            <div class="service-col-item">
+              <span class="service-pill-badge">Rod Bending</span>
+              <p class="service-col-desc">
+                TMT steel bars cut and bent to the shapes your structural drawing calls for (stirrups, hooks, L- and
+                U-bends), ready for reinforcement work
+              </p>
+            </div>
+
+            <div class="service-col-divider" aria-hidden="true"></div>
+
+            <div class="service-col-item">
+              <span class="service-pill-badge">Labour Supply</span>
+              <p class="service-col-desc">
+                skilled and unskilled crews, supplied alongside material and machinery so you're not coordinating a
+                separate contractor
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Horizontal Divider Rule -->
+          <div class="services-horizontal-divider" aria-hidden="true"></div>
+
+          <!-- Bottom Coming Soon -->
+          <div class="services-coming-soon-block">
+            <span class="more-label">More Materials</span>
+            <h4 class="coming-soon-heading">Coming Sooon...</h4>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. WHY BUILDERS CHOOSE US (Figma Frame 5: why chose us)
+         ========================================================================= -->
+    <section class="why-us-section" id="why-us">
+      <div class="container">
+
+        <!-- Bento 2-Column Grid Matching Figma Design -->
+        <div class="why-bento-grid">
+
+          <!-- Left Block: Short Blue Card on Top, Two Tall Cards on Bottom -->
+          <div class="why-bento-col">
+
+            <!-- Solid Royal Blue Header Card -->
+            <div class="why-blue-card">
+              <h2 class="why-blue-title">Why Builders Choose Us</h2>
+              <p class="why-blue-subtitle">A simpler way to get complex projects built and delivered.</p>
+            </div>
+
+            <!-- 2 Tall Cards Side-by-Side -->
+            <div class="why-cards-pair">
+              <div class="why-light-card">
+                <h3 class="why-card-heading">Factory to<br>Handover</h3>
+                <p class="why-card-text">
+                  We show up with the factory, not just the delivery truck, one point of contact from enquiry to
+                  handover
+                </p>
+              </div>
+
+              <div class="why-light-card">
+                <h3 class="why-card-heading">Proven at<br>Scale</h3>
+                <p class="why-card-text">
+                  30+ projects delivered since 2021, with 10+ more ongoing and upcoming
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Block: Two Tall Cards on Top, One Wide Card on Bottom -->
+          <div class="why-bento-col">
+
+            <!-- 2 Tall Cards Side-by-Side -->
+            <div class="why-cards-pair">
+              <div class="why-light-card">
+                <h3 class="why-card-heading">Standard or<br>Custom</h3>
+                <p class="why-card-text">
+                  Whatever the requirement, from standard to custom builds, delivered to your exact needs already
+                  trusted by <strong>Amara Raja</strong>
+                </p>
+              </div>
+
+              <div class="why-light-card">
+                <h3 class="why-card-heading">End-to-End<br>Execution</h3>
+                <p class="why-card-text">
+                  End-to-end on every job - material, machinery, setup, and labour, so you're not juggling vendors
+                </p>
+              </div>
+            </div>
+
+            <!-- 1 Wide Short Card -->
+            <div class="why-light-card why-card-wide">
+              <h3 class="why-card-heading">Proven Reach</h3>
+              <p class="why-card-text">
+                Telangana, Andhra Pradesh, Tamil Nadu, Maharashtra, Karnataka. Anywhere you need us.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. WHERE WE'VE BUILT / PRESTIGIOUS PROJECTS (Figma Frame 6: Frame 45)
+         ========================================================================= -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+
+        <!-- Header Block -->
+        <div class="projects-header-block">
+          <span class="projects-kicker">Projects &amp; Clients</span>
+          <h2 class="projects-main-title">Where We've <span class="lime-text">Built</span></h2>
+          <p class="projects-subtitle">
+            Projects across all India - each one <strong>proof that bringing the factory to site isn't a pitch, it's how
+              we work.</strong>
+          </p>
+        </div>
+
+        <!-- Thin Horizontal Rule Separator -->
+        <div class="projects-horizontal-divider" aria-hidden="true"></div>
+
+        <!-- Prestigious Projects Sub-block -->
+        <div class="prestige-intro-block">
+          <h3 class="prestige-green-title">Prestigious Projects</h3>
+          <h4 class="prestige-bold-lead">The work we're proudest - factories, hospitals, colleges, and homes built with
+            us on-site.</h4>
+          <p class="prestige-desc-text">We supplied bricks and unskilled labour on each of the following</p>
+        </div>
+
+        <!-- 6 Projects Photos Grid (3 Columns x 2 Rows with Bottom Overlay) -->
+        <div class="projects-3x2-grid">
+
+          <!-- Card 1 -->
+          <div class="project-photo-card">
+            <img src="assets/project-bhadrachalam.png" alt="Bhadrachalam ITC Paper Factory Staff Quarters"
+              class="proj-img" loading="lazy">
+            <div class="proj-card-overlay">
+              <h4 class="proj-card-title">Bhadrachalam ITC<br>Paper Factory</h4>
+              <p class="proj-card-sub">Staff quarters</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="project-photo-card">
+            <img src="assets/project-christ-medical.png" alt="Christ Medical College Vellore" class="proj-img"
+              loading="lazy">
+            <div class="proj-card-overlay">
+              <h4 class="proj-card-title">Christ Medical<br>College</h4>
+              <p class="proj-card-sub">Vellore</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="project-photo-card">
+            <img src="assets/project-nallakunta.png" alt="Nallakunta Fever Hospital Hyderabad" class="proj-img"
+              loading="lazy">
+            <div class="proj-card-overlay">
+              <h4 class="proj-card-title">Nallakunta Fever<br>Hospital</h4>
+              <p class="proj-card-sub">Hyderabad</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="project-photo-card">
+            <img src="assets/project-amaraja.png" alt="Amaraja Battery Factory Mahbubnagar" class="proj-img"
+              loading="lazy">
+            <div class="proj-card-overlay">
+              <h4 class="proj-card-title">Amaraja Battery<br>Factory</h4>
+              <p class="proj-card-sub">Mahbubnagar</p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="project-photo-card">
+            <img src="assets/project-rajapushpa.png" alt="Raja Pushpa Apartments Tellapur Hyderabad" class="proj-img"
+              loading="lazy">
+            <div class="proj-card-overlay">
+              <h4 class="proj-card-title">Raja Pushpa<br>Apartments</h4>
+              <p class="proj-card-sub">Tellapur, Hyderabad</p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="project-photo-card">
+            <img src="assets/project-ncc.png" alt="NCC Apartments Bibinagar Hyderabad" class="proj-img" loading="lazy">
+            <div class="proj-card-overlay">
+              <h4 class="proj-card-title">NCC Apartments<br>Bibinagar</h4>
+              <p class="proj-card-sub">Hyderabad</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Full-Width Dark Testimonial Card Below the 6 Photos -->
+        <div class="fullwidth-testimonial-card">
+          <h3 class="test-top-title">What Our Clients Say</h3>
+          <p class="test-top-subtitle">
+            High-output developers depend on MLR on-site manufacturing to eliminate bulk transport bottlenecks and
+            schedule guesswork.
+          </p>
+
+          <blockquote class="test-quote-text" id="activeQuoteText">
+            "MLR delivers exactly what they promise: bricks cast on our site, on our schedule, without the delays a
+            trucked-in supplier would have given us."
+          </blockquote>
+
+          <div class="test-quote-author" id="activeQuoteAuthor">
+            <strong>- Vamshi Krishna,</strong> <span>MD, VKC</span>
+          </div>
+
+          <!-- Dot slider indicators (Active is elongated lime pill) -->
+          <div class="testimonial-slider-dots">
+            <span class="t-dot active" data-quote-idx="0"></span>
+            <span class="t-dot" data-quote-idx="1"></span>
+            <span class="t-dot" data-quote-idx="2"></span>
+            <span class="t-dot" data-quote-idx="3"></span>
+            <span class="t-dot" data-quote-idx="4"></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. HOW WE BRING THE FACTORY TO YOU & WHERE WE WORK (Figma Frames 46 & 47)
+         ========================================================================= -->
+    <section class="process-locations-section" id="process">
+      <div class="container">
+
+        <!-- Big Unified Lime Green Container -->
+        <div class="unified-lime-container">
+
+          <!-- Top Section: How We Bring the Factory to You -->
+          <div class="process-top-block">
+            <span class="process-kicker-text">Process &amp; Service</span>
+            <h2 class="process-main-title">How We Bring the Factory to You</h2>
+            <p class="process-subtitle">
+              From the first site visit to a finished batch, here's what moving the factory to your location actually
+              looks like.
+            </p>
+
+            <!-- 4 Dark Process Cards -->
+            <div class="process-4cards-grid">
+
+              <!-- Step 01 -->
+              <div class="process-dark-card">
+                <div class="step-card-header">
+                  <h4 class="step-card-title">Site<br>Assessment</h4>
+                  <span class="step-badge-white">01</span>
+                </div>
+                <p class="step-card-desc">
+                  We visit, survey the ground &amp; scope exactly for the job needs before a single machine moves.
+                </p>
+              </div>
+
+              <!-- Step 02 -->
+              <div class="process-dark-card">
+                <div class="step-card-header">
+                  <h4 class="step-card-title">Machinery<br>Mobilization</h4>
+                  <span class="step-badge-white">02</span>
+                </div>
+                <p class="step-card-desc">
+                  Casting equipment and crew will move to your site, set up machinery and ready to run.
+                </p>
+              </div>
+
+              <!-- Step 03 -->
+              <div class="process-dark-card">
+                <div class="step-card-header">
+                  <h4 class="step-card-title">On-Site<br>Production</h4>
+                  <span class="step-badge-white">03</span>
+                </div>
+                <p class="step-card-desc">
+                  Bricks, panels, or pavers cast to specifications, right there on location, batch after batch.
+                </p>
+              </div>
+
+              <!-- Step 04 -->
+              <div class="process-dark-card">
+                <div class="step-card-header">
+                  <h4 class="step-card-title">Quality check<br>to Handover</h4>
+                  <span class="step-badge-white">04</span>
+                </div>
+                <p class="step-card-desc">
+                  Cured, checked, and ready to build with - delivered the same day it's cast.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Bottom Section: Where We Work (Map + Coverage) -->
+          <div class="where-we-work-bottom-block">
+
+            <div class="where-grid-layout">
+
+              <!-- Left: Dark Card with India Map Outline -->
+              <div class="map-dark-card">
+                <img src="assets/where-we-work-dark.png" alt="MLR Operational Coverage Map" class="map-graphic-img">
+              </div>
+
+              <!-- Right: States & Coverage Stats -->
+              <div class="coverage-content-col">
+                <h3 class="where-bold-title">Where We Work</h3>
+                <p class="where-lead-desc">
+                  These are the places we've already built in - not the limit of where we go. If your project's outside
+                  this map, we mobilize to you, anywhere in India.
+                </p>
+
+                <!-- State Pills (Flows naturally, wrapping when space does not fit) -->
+                <div class="state-pills-wrap">
+                  <span class="state-pill">Telangana</span>
+                  <span class="state-pill">Andhra Pradesh</span>
+                  <span class="state-pill">Karnataka</span>
+                  <span class="state-pill">Tamil Nadu</span>
+                  <span class="state-pill">Maharashtra</span>
+                </div>
+
+                <!-- White 3-Stats Bar -->
+                <div class="white-coverage-stats-bar">
+                  <div class="stat-item">
+                    <span class="stat-line-text"><strong>05</strong> States</span>
+                  </div>
+                  <div class="stat-v-sep"></div>
+                  <div class="stat-item">
+                    <span class="stat-line-text"><strong>23</strong> Districts</span>
+                  </div>
+                  <div class="stat-v-sep"></div>
+                  <div class="stat-item">
+                    <span class="stat-line-text"><strong>29</strong> Locations</span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      </div>
+
+      </div>
+
+      </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. ON-SITE PRODUCTION ESTIMATOR (Exact Design Style - Single Mode: Wall Size)
+         ========================================================================= -->
+    <section class="estimator-section" id="estimator">
+      <div class="container">
+
+        <div class="section-center-header">
+          <span class="section-label-blue">Estimator</span>
+          <h2 class="section-title">On-Site Production Estimator</h2>
+          <p class="section-subtitle">
+            Calculate your brick requirement, mortar volume, and on-site production schedule based on your project's
+            wall dimensions.
+          </p>
+        </div>
+
+        <!-- 2-Column Estimator Box -->
+        <div class="estimator-unified-card">
+
+          <!-- Left Column (Input Controls) -->
+          <div class="estimator-controls-col">
+
+            <!-- Material Selector -->
+            <div class="form-group-block">
+              <label class="block-label">Select Concrete Product</label>
+              <div class="calc-segmented-tabs">
+                <button type="button" class="calc-tab active" data-prod="cc_bricks">CC Bricks</button>
+                <button type="button" class="calc-tab" data-prod="precast_fencing">Precast Fencing</button>
+                <button type="button" class="calc-tab" data-prod="pavers">Paver Blocks</button>
+              </div>
+            </div>
+
+            <!-- Brick Size Selector (Standard Moulds) -->
+            <div class="form-group-block">
+              <label class="block-label">Standard Mould Size</label>
+              <div class="calc-sizes-grid">
+                <button type="button" class="calc-size-btn active" data-l="300" data-w="200" data-h="200">300×200×200
+                  mm</button>
+                <button type="button" class="calc-size-btn" data-l="300" data-w="200" data-h="150">300×200×150
+                  mm</button>
+                <button type="button" class="calc-size-btn" data-l="300" data-w="200" data-h="100">300×200×100
+                  mm</button>
+                <button type="button" class="calc-size-btn" data-l="290" data-w="225" data-h="140">290×225×140
+                  mm</button>
+              </div>
+            </div>
+
+            <!-- Wall Dimensions Inputs (Single Mode) -->
+            <div class="form-group-block">
+              <label class="block-label">Wall Dimensions (Single Mode: By Wall Size)</label>
+              <div class="input-duo-grid">
+                <div class="input-field-wrap">
+                  <label for="wallLength" class="field-label">Total Wall Length (Feet)</label>
+                  <input type="number" id="wallLength" class="calc-input" value="100" min="1" step="1">
+                </div>
+                <div class="input-field-wrap">
+                  <label for="wallHeight" class="field-label">Wall Height (Feet)</label>
+                  <input type="number" id="wallHeight" class="calc-input" value="10" min="1" step="0.5">
+                </div>
+              </div>
+            </div>
+
+            <!-- Deductions & Wastage -->
+            <div class="form-group-block">
+              <div class="input-duo-grid">
+                <div class="input-field-wrap">
+                  <label for="wallOpenings" class="field-label">Doors / Windows Deductions (Sq. Ft)</label>
+                  <input type="number" id="wallOpenings" class="calc-input" value="40" min="0" step="5">
+                </div>
+                <div class="input-field-wrap">
+                  <label for="calcWastage" class="field-label">On-Site Wastage Allowance (<span
+                      id="wastageValueLabel">5%</span>)</label>
+                  <input type="range" id="calcWastage" class="calc-range" min="0" max="15" value="5" step="1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Project Presets -->
+            <div class="form-group-block">
+              <span class="presets-label">Quick Project Presets:</span>
+              <div class="presets-btns-row">
+                <button type="button" class="preset-pill-btn" data-len="500" data-hgt="8" data-ded="20">Boundary Wall
+                  (500 ft)</button>
+                <button type="button" class="preset-pill-btn" data-len="200" data-hgt="10" data-ded="100">Residential
+                  Floor</button>
+                <button type="button" class="preset-pill-btn" data-len="1200" data-hgt="12" data-ded="300">Commercial
+                  Complex</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column (Royal Blue Estimate Output Card) -->
+          <div class="estimator-results-col">
+            <div class="royal-results-card">
+              <span class="results-kicker">PRODUCTION FORECAST</span>
+              <h3 class="results-main-title">Estimated Scope</h3>
+
+              <div class="results-hero-number-wrap">
+                <div class="results-big-num" id="displayBrickCount">1,824</div>
+                <div class="results-unit-label" id="displayUnitLabel">Bricks Required</div>
+              </div>
+
+              <!-- Output Metrics Grid -->
+              <div class="output-metrics-grid">
+                <div class="metric-box">
+                  <span class="m-label">Net Wall Area</span>
+                  <strong class="m-val" id="displayNetArea">960 sq.ft</strong>
+                </div>
+                <div class="metric-box">
+                  <span class="m-label">Casting Output</span>
+                  <strong class="m-val">3,500 / day</strong>
+                </div>
+                <div class="metric-box">
+                  <span class="m-label">Production Time</span>
+                  <strong class="m-val" id="displayProdDays">~1 Day</strong>
+                </div>
+                <div class="metric-box">
+                  <span class="m-label">Transit Loss</span>
+                  <strong class="m-val">0% (On-Site)</strong>
+                </div>
+              </div>
+
+              <p class="results-note">
+                *Includes raw material batching, hydraulic pressing, and steam curing directly on your project site.
+              </p>
+
+              <!-- Bridge CTA to Contact Form -->
+              <a href="#contact" class="btn-white-pill-cta" id="btnTransferEstimate">
+                <span>Send Estimate to Enquiry</span>
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. CONTACT & ENQUIRY (Exact Design Style - "Let's Build")
+         ========================================================================= -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+
+        <div class="section-center-header">
+          <span class="section-label-blue">Contact Us</span>
+          <h2 class="section-title">Let's Build <span class="lime-text">Together</span></h2>
+          <p class="section-subtitle">
+            Deploy an automated manufacturing unit to your project site or request a custom mould casting audit.
+          </p>
+        </div>
+
+        <!-- 2-Column Contact Layout -->
+        <div class="contact-2col-layout">
+
+          <!-- Left Column (Dark Industrial Card) -->
+          <div class="contact-dark-card">
+            <h3 class="contact-plant-title">Direct Plant Dispatch</h3>
+            <p class="contact-plant-desc">
+              Connect directly with our engineering operations desk. We evaluate site suitability, power requirements,
+              and mobilize heavy units across South &amp; Western India.
+            </p>
+
+            <div class="contact-details-list">
+              <div class="contact-item">
+                <strong class="c-label">Central Office &amp; Engineering Yard:</strong>
+                <span class="c-val">MLR Building Materials, Industrial Corridor, Hyderabad, Telangana</span>
+              </div>
+              <div class="contact-item">
+                <strong class="c-label">Direct Lines:</strong>
+                <span class="c-val">+91 98480 12345 / +91 94400 67890</span>
+              </div>
+              <div class="contact-item">
+                <strong class="c-label">Project Enquiries:</strong>
+                <span class="c-val">projects@mlrinfra.com / dispatch@mlrinfra.com</span>
+              </div>
+              <div class="contact-item">
+                <strong class="c-label">Operational Hours:</strong>
+                <span class="c-val">Monday – Saturday: 8:00 AM – 8:00 PM</span>
+              </div>
+            </div>
+
+            <!-- Rapid Deployment Alert Box -->
+            <div class="rapid-dispatch-alert">
+              <div class="alert-text">
+                <strong>72-Hour Rapid Mobilization</strong><br>
+                Mobile casting units ready for dispatch across Telangana, Andhra Pradesh, Karnataka, Tamil Nadu, and
+                Maharashtra.
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column (White Form Card) -->
+          <div class="contact-form-card">
+            <h3 class="form-heading">Project Feasibility &amp; Site Audit</h3>
+            <p class="form-subtext">Fill in your site details. Our engineering team will review feasibility and call
+              within 4 business hours.</p>
+
+            <form id="siteEnquiryForm" class="site-enquiry-form">
+
+              <div class="form-row-2col">
+                <div class="form-field">
+                  <label for="contactName">Full Name *</label>
+                  <input type="text" id="contactName" name="fullName" placeholder="e.g. Ramesh Reddy" required>
+                </div>
+                <div class="form-field">
+                  <label for="contactCompany">Company / Organization *</label>
+                  <input type="text" id="contactCompany" name="company" placeholder="e.g. Navayuga Infra" required>
+                </div>
+              </div>
+
+              <div class="form-row-2col">
+                <div class="form-field">
+                  <label for="contactPhone">Phone Number *</label>
+                  <input type="tel" id="contactPhone" name="phone" placeholder="+91 98765 43210" required>
+                </div>
+                <div class="form-field">
+                  <label for="contactEmail">Email Address</label>
+                  <input type="email" id="contactEmail" name="email" placeholder="name@company.com">
+                </div>
+              </div>
+
+              <div class="form-row-2col">
+                <div class="form-field">
+                  <label for="projectLocation">Project Location (State / City) *</label>
+                  <input type="text" id="projectLocation" name="location" placeholder="e.g. Tellapur, Hyderabad"
+                    required>
+                </div>
+                <div class="form-field">
+                  <label for="projectType">Material Required</label>
+                  <select id="projectType" name="material">
+                    <option value="CC Bricks">CC Bricks (Solid / Fly Ash)</option>
+                    <option value="Precast Fencing">Precast Compound Fencing</option>
+                    <option value="Paver Blocks">Interlocking Paver Blocks</option>
+                    <option value="Custom Size">Custom Architectural Moulds</option>
+                    <option value="End-to-End Execution">Full Turnkey (Material + Labour)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="projectEstimateNotes">Estimated Scope / Requirements</label>
+                <textarea id="projectEstimateNotes" name="notes" rows="3"
+                  placeholder="Tell us your wall dimensions or estimated brick count..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-royal-submit" id="btnSubmitEnquiry">
+                <span>Submit Site Enquiry</span>
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </form>
+
+            <div class="form-success-banner" id="formSuccessMessage" style="display: none;">
+              <div class="success-icon">✓</div>
+              <div class="success-text">
+                <strong>Enquiry Received!</strong><br>
+                Our engineering team has received your project details and will contact you shortly with a feasibility
+                plan.
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       9. FOOTER (Dark Theme)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <img src="MLR Logo.svg" alt="MLR Building Materials" class="footer-logo">
+          <p class="footer-brand-desc">
+            On-demand, on-site concrete brick manufacturing tailored to your project's schedule and scale across South
+            India.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5 class="f-col-title">Navigation</h5>
+          <ul class="f-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#estimator">Estimator</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5 class="f-col-title">Coverage</h5>
+          <ul class="f-links">
+            <li>Telangana (Hyderabad, Kamareddy)</li>
+            <li>Andhra Pradesh (Chittoor, Tirupati)</li>
+            <li>Karnataka (Bengaluru, Hubli)</li>
+            <li>Tamil Nadu (Vellore, Chennai)</li>
+            <li>Maharashtra (Nagpur, Pune)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright">&copy; 2026 MLR Building Materials. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="#about">Privacy Policy</a>
+          <span class="dot">&bull;</span>
+          <a href="#about">Terms of Service</a>
+          <span class="dot">&bull;</span>
+          <a href="#contact">Site Audits</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Lenis Smooth Scroll Engine -->
+  <script src="lenis.min.js"></script>
+  <script src="main.js?v=2026_v22"></script>
+</body>
+
+</html>
